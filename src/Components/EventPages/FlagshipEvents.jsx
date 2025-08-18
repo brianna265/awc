@@ -1,0 +1,83 @@
+import React from 'react'
+import './Meetings.css'
+import { useNavigate } from 'react-router-dom'
+
+const FlagshipEvents = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate('/');
+
+    setTimeout(() => {
+      const eventsSection = document.getElementById('activities');
+      if (eventsSection) {
+        const navBarHeight = 67.74;
+        const offset = navBarHeight + 70;
+        const elementPosition = eventsSection.offsetTop - offset;
+
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
+  };
+  
+  return (
+    <div className='event-type-page'>
+      {/* Header Section */}
+      <div className='event-header'>
+        <button className='back-button' onClick={handleBack}>
+          ← Back
+        </button>
+        <div className='header-content'>
+          <h1>Events</h1>
+        </div>
+        
+      </div>
+
+      <div className='content-section'>
+        <p>AWC runs a number of annual and semi-annual activities to support 
+            its mission of promoting the recruitment and retention of women in 
+            technology- and computer-oriented professions. These events are 
+            designed to foster professional development and contribute to the 
+            local community.</p>
+        <div className='content'>
+          <h1>HackViolet</h1>
+          <p>HackViolet (previously known as SheHacksVT) is the annual 
+              female-empowerment hackathon hosted at VT! Hackers of all 
+              genders are invited to innovate, create, and inspire with code. 
+              This is a great opportunity to network, meet like-minded 
+              students and receive swag and prizes. No experience necessary; 
+              open to all majors! Learn more at 
+              <a href="https://www.hackviolet.com/" target="_blank" rel='noopener noreferrer' className='inline-link'> hackviolet.com</a>!
+          </p>
+          <p>For any questions, feel free to contact
+              <a href="mailto:hackvioletvt@gmail.com" className='inline-link'> hackvioletvt@gmail.com</a>.
+          </p>
+        </div>
+        <div className='content'>
+          <h1>Women in Computing Day</h1>
+          <p>Every spring, the Association for Women in Computing hosts 
+              <b> Women in Computing Day</b>, an outreach event introducing 
+              6th- and 7th-grade girls to the exciting world of technology. 
+              Now in its 22nd year, this program is a cornerstone of our 
+              mission to inspire the next generation of women in tech. With 
+              the male-to-female ratio in computing still disproportionately 
+              low, this event provides early exposure.
+          </p>
+          <p>Throughout the day, participants explore four hands-on activities
+              showcasing the breadth of computing, from coding with Snap to 
+              building circuits with LEDs, designing apps, and even 
+              experimenting with biotechnology. By sparking curiosity and 
+              confidence at a young age, we aim to open doors to future 
+              opportunities and help shape a more diverse and inclusive tech 
+              community.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default FlagshipEvents

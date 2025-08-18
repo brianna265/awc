@@ -1,0 +1,21 @@
+.footer{
+    margin: 15px auto;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* border-top: 1px solid #797979; */
+    padding: 5px 0;
+    text-align: center;
+}
+
+.footer img{
+    width: 150px;
+    padding: 15px 0;
+}
+
+.footer ul li{
+    list-style: none;
+    display: flex;
+    /* margin-left: 20px; */
+    justify-content: center;
+}

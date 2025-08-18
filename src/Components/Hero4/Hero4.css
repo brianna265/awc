@@ -1,0 +1,248 @@
+.hero-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1e2e, #16283e, #03324d);
+  overflow: hidden;
+  transition: background 0.5s ease;
+}
+
+.hero-container.light-on {
+  background: linear-gradient(135deg, #334a67, #223f66, #044063);
+}
+
+.hero-container.light-on .light-blur-effect {
+  background: radial-gradient(circle, rgba(255, 246, 66, 0.695) 0%, rgba(255, 244, 128, 0.3) 30%, rgba(255, 255, 255, 0) 70%);
+  opacity: 1;
+  width: 400px;
+  height: 400px;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 2rem 5%;
+  z-index: 2;
+}
+
+.logo-section {
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.logo-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.light-blur-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 224, 67, 0.413) 0%, rgba(255, 212, 57, 0.04) 100%) !important;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0;
+  transition: all 0.8s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.logo {
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5)) !important;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.hanging-wire-container {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.wire {
+  width: 2px;
+  background: linear-gradient(to bottom, #0d3a4b55, #37789bc4, #365767);
+  border-radius: 1px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  left: 10%;
+  transform: translateX(-50%);
+}
+
+.wire::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.wire-pull {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle at 30% 30%, #a8b9c0, #486673, #1b506a);
+  border-radius: 50%;
+  cursor: grab;
+  border: 1.5px solid #62759e;
+  position: relative;
+  transition: all 0.2s ease;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wire-pull:hover {
+  background: radial-gradient(circle at 30% 30%, #eee, #bbb, #888);
+  transform: scale(1.1);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4), inset 0 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+.wire-pull.dragging {
+  background: radial-gradient(circle at 30% 30%, #fff, #ccc, #999);
+  transform: scale(1.15);
+  cursor: grabbing;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.pull-ring {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0.7;
+}
+
+/* text styling */
+.text-section {
+  padding-left: 2rem;
+  flex-basis: 65%;
+}
+  
+.text-section h1 {
+  font: 100px;
+  font-weight: 650;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  line-height: 1.5;
+  transition: all 0.5s ease;
+}
+  
+.hero-container.light-on h1 {
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+  
+.text-section h2 {
+  font: 50px;
+  font-weight: 450;
+  margin-bottom: 0.7rem;
+  color: #c9c9c9;
+  transition: color 0.5s ease;
+}
+  
+.hero-container.light-on h2 {
+  color: #f5f4f4;
+}
+  
+.text-section p {
+  font-size: 1.0rem;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+  color: #c9c9c9;
+  transition: color 0.5s ease;
+}
+
+.hero-container.light-on p {
+  color: #f1f1f1;
+}
+
+/* button styling */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* light enhancement for buttons when light is on */
+.hero-container.light-on .btn-primary {
+  color: #fff;
+  background: linear-gradient(45deg, #39B4BF, #065e91);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.hero-container.light-on .btn-secondary {
+  color: #fff;
+  border-color: #39B4BF;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+  
+/* ---------- media query ---------- */
+@media (max-width: 770px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+  }
+
+  .logo-section {
+    margin-top: 2rem;
+  }
+
+  .text-section {
+    flex-basis: auto;
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+
+  .text-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .logo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-container.light-on .light-blur-effect {
+    width: 300px;
+    height: 300px;
+  }
+}

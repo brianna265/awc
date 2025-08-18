@@ -1,0 +1,315 @@
+.event-type-page {
+    min-height: 100vh;
+    background: var(--background-color, #f8f9fa);
+  }
+  
+  /* Header Section */
+  .event-header {
+    background: linear-gradient(135deg, var(--color3, #667eea), var(--color2, #764ba2));
+    color: white;
+    padding: 2rem 5%;
+    position: relative;
+  }
+  
+  .back-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+  }
+  
+  .back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-2px);
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .header-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+  
+  /* Overview Section */
+  .event-overview {
+    padding: 4rem 5%;
+    background: white;
+  }
+  
+  .overview-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .overview-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color2, #2c3e50);
+    margin-bottom: 1.5rem;
+  }
+  
+  .overview-content p {
+    font-size: 1.1rem;
+    color: var(--color6, #666);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .stat {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--background-color, #f8f9fa);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .stat:hover {
+    border-color: var(--color3, #667eea);
+    transform: translateY(-2px);
+  }
+  
+  .stat h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color3, #667eea);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat p {
+    font-size: 1rem;
+    color: var(--color6, #666);
+    margin: 0;
+  }
+  
+  /* Events Grid Section */
+  .events-grid-section {
+    padding: 4rem 5%;
+    background: var(--background-color, #f8f9fa);
+  }
+  
+  .events-grid-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color2, #2c3e50);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .event-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+  
+  .event-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .event-card:hover .event-image img {
+    transform: scale(1.05);
+  }
+  
+  .frequency-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color3, #667eea);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .event-content {
+    padding: 2rem;
+  }
+  
+  .event-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color2, #2c3e50);
+    margin-bottom: 1rem;
+  }
+  
+  .event-content p {
+    color: var(--color6, #666);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Call to Action Section */
+  .cta-section {
+    padding: 4rem 5%;
+    background: white;
+    text-align: center;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color2, #2c3e50);
+    margin-bottom: 1rem;
+  }
+  
+  .cta-section p {
+    font-size: 1.1rem;
+    color: var(--color6, #666);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(45deg, var(--color3, #667eea), var(--color2, #764ba2));
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: var(--color3, #667eea);
+    border: 2px solid var(--color3, #667eea);
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .event-header {
+      padding: 1.5rem 3%;
+    }
+  
+    .header-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .header-content p {
+      font-size: 1rem;
+    }
+  
+    .event-overview, .events-grid-section, .cta-section {
+      padding: 2rem 3%;
+    }
+  
+    .overview-content h2, .events-grid-section h2, .cta-section h2 {
+      font-size: 2rem;
+    }
+  
+    .events-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .stats {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .btn-primary, .btn-secondary {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .event-header {
+      padding: 1rem 2%;
+    }
+  
+    .header-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .events-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .event-content {
+      padding: 1.5rem;
+    }
+  }
