@@ -3,25 +3,25 @@ import './Officers.css'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import officer_1 from '../../assets/Leadership/anya-b.png'
-import officer_2 from '../../assets/Leadership/shreya-t.png'
-import officer_3 from '../../assets/Leadership/swathi-v.png'
-import officer_4 from '../../assets/Leadership/aastha-p.jpeg'
-import officer_5 from '../../assets/Leadership/no-photo.png'
-import officer_6 from '../../assets/Leadership/no-photo.png'
-import officer_7 from '../../assets/Leadership/no-photo.png'
-import officer_8 from '../../assets/Leadership/no-photo.png'
-import officer_9 from '../../assets/Leadership/no-photo.png'
-import officer_10 from '../../assets/Leadership/no-photo.png'
-import officer_11 from '../../assets/Leadership/no-photo.png'
-import officer_12 from '../../assets/Leadership/no-photo.png'
-import officer_13 from '../../assets/Leadership/no-photo.png'
-import officer_14 from '../../assets/Leadership/no-photo.png'
-import officer_15 from '../../assets/Leadership/no-photo.png'
-import officer_16 from '../../assets/Leadership/no-photo.png'
-import officer_17 from '../../assets/Leadership/no-photo.png'
-import officer_18 from '../../assets/Leadership/no-photo.png'
-import officer_19 from '../../assets/Leadership/no-photo.png'
+// import officer_1 from '../../assets/Leadership/anya-b.png'
+// import officer_2 from '../../assets/Leadership/shreya-t.png'
+// import officer_3 from '../../assets/Leadership/swathi-v.png'
+// import officer_4 from '../../assets/Leadership/aastha-p.jpeg'
+// import officer_5 from '../../assets/Leadership/no-photo.png'
+// import officer_6 from '../../assets/Leadership/no-photo.png'
+// import officer_7 from '../../assets/Leadership/no-photo.png'
+// import officer_8 from '../../assets/Leadership/no-photo.png'
+// import officer_9 from '../../assets/Leadership/no-photo.png'
+// import officer_10 from '../../assets/Leadership/no-photo.png'
+// import officer_11 from '../../assets/Leadership/no-photo.png'
+// import officer_12 from '../../assets/Leadership/no-photo.png'
+// import officer_13 from '../../assets/Leadership/no-photo.png'
+// import officer_14 from '../../assets/Leadership/no-photo.png'
+// import officer_15 from '../../assets/Leadership/no-photo.png'
+// import officer_16 from '../../assets/Leadership/no-photo.png'
+// import officer_17 from '../../assets/Leadership/no-photo.png'
+// import officer_18 from '../../assets/Leadership/no-photo.png'
+// import officer_19 from '../../assets/Leadership/no-photo.png'
 import Heading from '../Heading/Heading'
 
 const Officers = () => {
@@ -67,7 +67,7 @@ const Officers = () => {
       
       <div className='officer-section'>
         <div className='officer'>
-        <img src={officer_1} alt="anya-b" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/anya-b.png`} alt="anya-b" />
         <div className='blurb'>
             {/* <p className='blurb-text'>short personal blurb for each officer here?</p> */}
         </div>
@@ -76,7 +76,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_2} alt="shreya-t" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/shreya-t.png`} alt="shreya-t" />
         <div className='blurb'>
             {/* <p className='blurb-text'>or nah?</p> */}
         </div>
@@ -85,7 +85,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_3} alt="swathi-v" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/swathi-v.png`} alt="swathi-v" />
         <div className='blurb'>
             {/* <p className='blurb-text'>we need pictures</p> */}
         </div>
@@ -94,7 +94,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_4} alt="aastha-p" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/aastha-p.jpeg`} alt="aastha-p" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -103,7 +103,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_5} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -112,7 +112,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_6} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -121,7 +121,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_7} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -130,7 +130,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_8} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -139,7 +139,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_9} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -148,7 +148,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_10} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -157,7 +157,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_11} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -166,7 +166,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_12} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -175,7 +175,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_13} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -184,7 +184,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_14} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -193,7 +193,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_15} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -202,7 +202,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_16} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -211,7 +211,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_17} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -220,7 +220,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_18} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>
@@ -229,7 +229,7 @@ const Officers = () => {
         </div>
       </div>
       <div className='officer'>
-        <img src={officer_19} alt="" />
+        <img src={`${import.meta.env.BASE_URL}images/Leadership/no-photo.png`} alt="" />
         <div className='blurb'>
             <p className='blurb-text'></p>
         </div>

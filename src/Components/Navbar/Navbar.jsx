@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
-import navbar_logo from '../../assets/navbar-removebg.png'
-import menu_icon from '../../assets/menu-icon.png'
+// import navbar_logo from '../../assets/navbar-removebg.png'
+// import menu_icon from '../../assets/menu-icon.png'
 // import { Link as ScrollLink } from 'react-scroll';
 import { useNavigate, useLocation } from 'react-router-dom'
 // import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
@@ -130,7 +130,7 @@ const Navbar = () => {
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
       {/* navbar logo */}
       <button className='nav-btn' onClick={() => handleNavClick('home')}>
-        <img src={navbar_logo} alt="navbar-logo" className='navbar-logo'/>
+        <img src={`${import.meta.env.BASE_URL}images/navbar-removebg.png`} alt="navbar-logo" className='navbar-logo'/>
       </button>
       
       <ul className={mobileMenu ? '':'hide-mobile-menu'}>
@@ -189,7 +189,7 @@ const Navbar = () => {
         {/* linktree */}
         <li><a className='btn-primary' href="https://linktr.ee/vt_awc" target='_blank' rel='noopener noreferrer'>Join Us</a></li>
       </ul>
-      <img src={menu_icon} alt="menu-icon" className='menu-icon' onClick={toggleMenu}/>
+      <img src={`${import.meta.env.BASE_URL}images/menu-icon.png`} alt="menu-icon" className='menu-icon' onClick={toggleMenu}/>
     </nav>
   )
 }
