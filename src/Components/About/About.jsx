@@ -1,6 +1,6 @@
 import React from 'react'
 import './About.css'
-import about_img from '../../assets/AWCLogo.png' /* change photo */
+// import about_img from '../../assets/AWCLogo.png'
 import { Link } from 'react-scroll';
 
 const About = () => {
@@ -46,7 +46,7 @@ const About = () => {
     <div className='about' id='about'>
       <div className='about-top'>
         <div className='about-top-left'>
-          <img src={about_img} alt="" className='about-img'/>
+          <img src={`${import.meta.env.BASE_URL}images/AWCLogo.png`} alt="" className='about-img'/>
         </div>
         <div className='about-top-right'>
           <h3>ABOUT US</h3>
