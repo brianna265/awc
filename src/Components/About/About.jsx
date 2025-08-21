@@ -2,6 +2,9 @@ import React from 'react'
 import './About.css'
 import about_img from '../../assets/AWCLogo.png'
 import { Link } from 'react-scroll';
+import darkArrow from '../../assets/dark-arrow.png'
+
+console.log('Dark arrow path:', darkArrow); // This should show the hashed filename
 
 const About = () => {
 
@@ -44,6 +47,12 @@ const About = () => {
 
   return (
     <div className='about' id='about'>
+      <img 
+        src={darkArrow} 
+        alt="Dark arrow"
+        onError={(e) => console.log('Image failed to load:', e.target.src)}
+        onLoad={() => console.log('Image loaded successfully')}
+      />
       <div className='about-top'>
         <div className='about-top-left'>
           <img src={about_img} alt="" className='about-img'/>
