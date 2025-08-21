@@ -55,7 +55,13 @@ const About = () => {
       />
       <div className='about-top'>
         <div className='about-top-left'>
-          <img src={about_img} alt="" className='about-img'/>
+          <img 
+            src={about_img} 
+            alt="" 
+            onError={(e) => console.log('Image failed to load:', e.target.src)}
+            onLoad={() => console.log('Image loaded successfully')}
+            className='about-img'
+          />
         </div>
         <div className='about-top-right'>
           <h3>ABOUT US</h3>
