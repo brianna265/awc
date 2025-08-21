@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Hero4.css';
-// import logo from '../../assets/AWCLogo-mod-off.png'
+import logo from '../../assets/AWCLogo-mod-off.png'
 
 const Hero4 = () => {
   const [isLightOn, setIsLightOn] = useState(false);
@@ -107,7 +107,7 @@ const Hero4 = () => {
           
           <div className="logo-container">
             <div className="light-blur-effect"></div>
-            <img src={`${import.meta.env.BASE_URL}images/AWCLogo-mod-off.png`} alt="awc-logo" className="logo"/>
+            <img src={logo} alt="awc-logo" className="logo"/>
             <div className="hanging-wire-container">
               <div 
                 className="wire" 
