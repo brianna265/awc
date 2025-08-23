@@ -130,7 +130,7 @@ const Navbar = () => {
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
       {/* navbar logo */}
       <button className='nav-btn' onClick={() => handleNavClick('home')}>
-        <img src={navbar_logo} alt="navbar-logo" className='navbar-logo'/>
+        <img src='/awc/images/AWCLogo-removebg.png' alt="navbar-logo" className='navbar-logo'/>
       </button>
       
       <ul className={mobileMenu ? '':'hide-mobile-menu'}>
