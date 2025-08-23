@@ -3,8 +3,6 @@ import './About.css'
 import about_img from '../../assets/AWCLogo.png'
 import { Link } from 'react-scroll';
 
-console.log('Dark arrow path:', darkArrow); // This should show the hashed filename
-
 const About = () => {
 
   // const handleEventsClick = (e) => {
