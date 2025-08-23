@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import navbar_logo from '../../assets/navbar-removebg.PNG'
-import navbar_logo_heic from '../../assets/navbar-removebg.heic'
+import navbar_logo_jpeg from '../../assets/navbar-removebg.jpeg'
 import menu_icon from '../../assets/menu-icon.png'
 // import { Link as ScrollLink } from 'react-scroll';
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -131,7 +131,7 @@ const Navbar = () => {
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
       {/* navbar logo */}
       <button className='nav-btn' onClick={() => handleNavClick('home')}>
-        <img src={navbar_logo_heic} alt="navbar-logo" className='navbar-logo'/>
+        <img src='/awc/images/navbar-removebg.jpeg' alt="navbar-logo" className='navbar-logo'/>
       </button>
       
       <ul className={mobileMenu ? '':'hide-mobile-menu'}>
