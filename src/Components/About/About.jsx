@@ -47,12 +47,6 @@ const About = () => {
 
   return (
     <div className='about' id='about'>
-      <img 
-        src={darkArrow} 
-        alt="Dark arrow"
-        onError={(e) => console.log('Image failed to load:', e.target.src)}
-        onLoad={() => console.log('Image loaded successfully')}
-      />
       <div className='about-top'>
         <div className='about-top-left'>
           <img 
