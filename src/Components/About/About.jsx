@@ -2,7 +2,6 @@ import React from 'react'
 import './About.css'
 import about_img from '../../assets/AWCLogo.png'
 import { Link } from 'react-scroll';
-import darkArrow from '../../assets/dark-arrow.png'
 
 console.log('Dark arrow path:', darkArrow); // This should show the hashed filename
 
