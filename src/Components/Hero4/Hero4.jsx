@@ -68,7 +68,7 @@ const Hero4 = () => {
       const aboutSection = document.getElementById('about');
       if (aboutSection) {
         const navbarHeight = 67.74;
-        const offset = navbarHeight + 20;
+        const offset = navbarHeight + 70;
         const elementPosition = aboutSection.offsetTop - offset;
 
         window.scrollTo ({
