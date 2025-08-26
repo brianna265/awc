@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
-import navbar_logo from '../../assets/navbar-removebg.png'
+import navbar_logo from '../../assets/images/navbar-removebg.png'
 import menu_icon from '../../assets/menu-icon.png'
 // import { Link as ScrollLink } from 'react-scroll';
 import { useNavigate, useLocation } from 'react-router-dom'
