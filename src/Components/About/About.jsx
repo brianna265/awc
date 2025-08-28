@@ -87,7 +87,7 @@ const About = () => {
           foster professional development and contribute to the local community.
           We also have many social activities to help build an enduring sense of
           community. You can find out more about what we do on our 
-          <Link to='events' smooth={true} offset={-210} duration={500} className='inline-link'> Events </Link>
+          <Link to='activities' smooth={true} offset={-150} duration={500} className='inline-link'> Activities </Link>
           {/* <a href="#events" onClick={handleEventsClick} className='inline-link'> Events </a> */}
           page, and if you’d like to support our efforts, or have any questions 
           at all, please feel free to 
