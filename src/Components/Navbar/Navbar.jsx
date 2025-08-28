@@ -61,6 +61,17 @@ const Navbar = () => {
     }
   }
 
+  // detect if user on mobile device
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 832 || 'ontouchstart' in window);
+    }
+
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+  })
+
   // dropdown menu states
   // const [dropdownOpen, setDropdownOpen] = useState(false);
   // const toggleDropdown = () => {
@@ -71,14 +82,32 @@ const Navbar = () => {
 
   // handle "About" click - for both "About" and "About Us"
   const handleAboutClick = () => {
-    setAboutDropdownOpen(false);   // close dropdown if it's open
-    handleNavClick('about');  // navigate to about section
+    if (isMobile) {
+      // on mobile
+      setAboutDropdownOpen(!aboutDropdownOpen); // toggle dropdown
+      setActivitiesDropdownOpen(false); // close other dropdown
+    }
+    else {
+      // on desktop
+      setAboutDropdownOpen(false);  // close dropdown if it's open
+      handleNavClick('about');  // navigate to about section
+    }
+    
   }
 
   // handle "Activities" click
   const handleActivitiesClick = () => {
-    setActivitiesDropdownOpen(false);   // close dropdown if it's open
-    handleNavClick('activities');  // navigate to activities section
+    if (isMobile) {
+      // on mobile
+      setActivitiesDropdownOpen(!activitiesDropdownOpen); // toggle dropdown
+      setAboutDropdownOpen(false); // close other dropdown
+    }
+    else {
+      // on desktop
+      setActivitiesDropdownOpen(false);   // close dropdown if it's open
+      handleNavClick('activities');  // navigate to activities section
+    }
+    
   }
 
   // handle subpage click
@@ -98,7 +127,20 @@ const Navbar = () => {
     }, 50);
   }
 
-  // close dropdown when clicking outside
+  // close dropdown when clicking outside (for mobile)
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const closeDropdowns = (e) => {
+      if (!e.target.closest('.nav-dropdown')) {
+        setAboutDropdownOpen(false);
+        setActivitiesDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener('click', closeDropdowns);
+    return () => document.removeEventListener('click', closeDropdowns);
+  }, [isMobile])
   // useEffect(() => {
   //   const closeDropdown = (e) => {
   //     if (dropdownOpen && !e.target.closest('.nav-dropdown')) {
@@ -109,21 +151,29 @@ const Navbar = () => {
   //   return () => document.removeEventListener('click', closeDropdown);
   // }, [dropdownOpen]);
 
-  // hover handlers for dropdown menus
+  // hover handlers for dropdown menus (for desktop)
   const handleAboutDropdownMouseEnter = () => {
-    setAboutDropdownOpen(true);
+    if (!isMobile) {
+      setAboutDropdownOpen(true);
+    }
   }
 
   const handleAboutDropdownMouseLeave = () => {
-    setAboutDropdownOpen(false);
+    if (!isMobile) {
+      setAboutDropdownOpen(false);
+    }
   }
 
   const handleActivitiesDropdownMouseEnter = () => {
-    setActivitiesDropdownOpen(true);
+    if (!isMobile) {
+      setActivitiesDropdownOpen(true);
+    }
   }
 
   const handleActivitiesDropdownMouseLeave = () => {
-    setActivitiesDropdownOpen(false);
+    if (!isMobile) {
+      setActivitiesDropdownOpen(false);
+    }
   }
 
   return (
@@ -147,7 +197,7 @@ const Navbar = () => {
 
             {aboutDropdownOpen && (
               <div className='dropdown-menu'>
-                <button className='nav-btn dropdown-item' onClick={handleAboutClick}>
+                <button className='nav-btn dropdown-item' onClick={() => isMobile ? handleNavClick('about') : handleAboutClick()}>
                   About Us
                 </button>
                 <button className='nav-btn dropdown-item' onClick={() => handleSubpageClick('/about/officers', () => setAboutDropdownOpen(false))}>
