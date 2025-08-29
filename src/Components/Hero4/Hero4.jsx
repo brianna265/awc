@@ -192,6 +192,7 @@ const Hero4 = () => {
               <div 
                 className={`wire-pull ${isDragging ? 'dragging' : ''}`}
                 onMouseDown={handleWireMouseDown}
+                onTouchStart={handleWireTouchStart}
               >
                 <div className="pull-ring"></div>
               </div>
