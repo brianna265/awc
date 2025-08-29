@@ -45,12 +45,14 @@ const Opportunities = () => {
                 professionals, and leaders to share research, foster mentorship, 
                 and empower the next generation of women in computing.
             </p>
-            <h2>Want to attend?</h2>
-            <p>Active involvement in AWC is the first step! Thanks to support 
+            {/* <h2>Want to attend?</h2> */}
+            {/* <p>Active involvement in AWC is the first step! Thanks to support 
                 from the CS Department, we offer a limited number of GHC 
                 scholarships to dedicated members who regularly attend meetings 
                 and events. It’s an incredible opportunity to connect, learn, 
-                and grow from peers and leaders in the field</p>
+                and grow from peers and leaders in the field
+            </p> */}
+            <p>Stay tuned for applications to attend the conference!</p>
         </div>
         
         <div className='content'>
