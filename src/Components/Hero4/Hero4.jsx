@@ -53,14 +53,22 @@ const Hero4 = () => {
   const handleWireTouchStart = (e) => {
       setIsDragging(true);
       setHasTriggered(false);
-      e.preventDefault();
-      e.stopPropagation();
 
-      document.body.style.overflow = 'hidden';  // prevent body scrolling while dragging
+      e.preventDefault();
+
+      // set up initial touch position for more accurate dragging
+      const touch = e.touches[0];
+      const startY = touch.clientY;
+      e.target.dataset.startY = startY;
   };
 
   const handleTouchMove = (e) => {
     if (!isDragging) return;
+
+    // disable scrolling once we start moving
+    if (!document.body.style.overflow) {
+      document.body.style.overflow = 'hidden';
+    }
     
     const logoContainer = document.querySelector('.logo-container');
     if (!logoContainer) return;
@@ -80,7 +88,8 @@ const Hero4 = () => {
       playAudio();
     }
     
-    e.preventDefault(); // Prevent scrolling while dragging
+    // prevent scrolling while dragging
+    e.preventDefault(); 
     e.stopPropagation();
   };
 
