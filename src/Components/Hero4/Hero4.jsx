@@ -8,7 +8,6 @@ const Hero4 = () => {
   const [wireLength, setWireLength] = useState(60); // Initial wire length
   const [hasTriggered, setHasTriggered] = useState(false);
 
-  // mouse events for desktop
   const handleWireMouseDown = (e) => {
     setIsDragging(true);
     setHasTriggered(false);
@@ -38,58 +37,6 @@ const Hero4 = () => {
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    // Bounce back with different lengths based on light state
-    setTimeout(() => {
-        if (isLightOn) {
-            setWireLength(75);
-        }
-        else {
-            setWireLength(50);
-        }  
-    }, 100);
-  };
-
-  // touch events for mobile
-  const handleWireTouchStart = (e) => {
-      setIsDragging(true);
-      setHasTriggered(false);
-
-      e.preventDefault();
-
-      // set up initial touch position for more accurate dragging
-      const touch = e.touches[0];
-      const startY = touch.clientY;
-      e.target.dataset.startY = startY;
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    
-    const logoContainer = document.querySelector('.logo-container');
-    if (!logoContainer) return;
-    
-    const rect = logoContainer.getBoundingClientRect();
-    const logoBottom = rect.bottom;
-    const touch = e.touches[0];
-    const touchY = touch.clientY;
-    const newLength = Math.max(30, Math.min(120, touchY - logoBottom + 30));
-    
-    setWireLength(newLength);
-    
-    // Toggle light when pulled down enough (only once per drag)
-    if (newLength > 80 && !hasTriggered) {
-      setIsLightOn(!isLightOn);
-      setHasTriggered(true);
-      playAudio();
-    }
-    
-    // prevent scrolling while dragging
-    e.preventDefault(); 
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-
     // Bounce back with different lengths based on light state
     setTimeout(() => {
         if (isLightOn) {
@@ -153,26 +100,6 @@ const Hero4 = () => {
     };
   }, [isDragging, isLightOn, hasTriggered]);
 
-  // effect for touch events
-  React.useEffect(() => {
-    if (isDragging) {
-      const handleTouchMovePassive = (e) => handleTouchMove(e);
-      const handleTouchEndPassive = () => handleTouchEnd();
-
-      document.addEventListener('touchmove', handleTouchMovePassive, { passive: false });
-      document.addEventListener('touchend', handleTouchEndPassive, { passive: false });
-      document.addEventListener('touchcancel', handleTouchEndPassive, { passive: false });
-    }
-    
-    return () => {
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleTouchEnd);
-      document.removeEventListener('touchcancel', handleTouchEnd);
-
-      document.body.style.overflow = '';  // ensure scrolling is re-enabled if component unmounts during drag
-    };
-  }, [isDragging, isLightOn, hasTriggered]);
-
   return (
     <div className={`hero-container ${isLightOn ? 'light-on' : ''}`} id='home'>
       <div className="hero-content">
@@ -193,7 +120,6 @@ const Hero4 = () => {
               <div 
                 className={`wire-pull ${isDragging ? 'dragging' : ''}`}
                 onMouseDown={handleWireMouseDown}
-                onTouchStart={handleWireTouchStart}
               >
                 <div className="pull-ring"></div>
               </div>
