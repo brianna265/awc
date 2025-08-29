@@ -132,7 +132,7 @@ const Hero4 = () => {
             <h1>The Association for Women in Computing @ Virginia Tech</h1>
             <p>Shaping the future of computing, together</p>
           <div className="hero-buttons">
-            <a className='btn-primary' href="https://gobblerconnect.vt.edu/organization/awc" target='_blank' rel='noopener noreferrer'>Join Gobblerconnect</a>
+            <a className='btn-primary' href="https://linktr.ee/awc_vt" target='_blank' rel='noopener noreferrer'>Check out our LinkTree!</a>
             <button className="btn-secondary" onClick={handleLearnMoreClick}>Learn More</button>
           </div>
         </div>
