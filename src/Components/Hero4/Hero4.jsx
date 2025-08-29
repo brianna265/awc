@@ -8,6 +8,7 @@ const Hero4 = () => {
   const [wireLength, setWireLength] = useState(60); // Initial wire length
   const [hasTriggered, setHasTriggered] = useState(false);
 
+  // mouse events for desktop
   const handleWireMouseDown = (e) => {
     setIsDragging(true);
     setHasTriggered(false);
@@ -36,6 +37,50 @@ const Hero4 = () => {
   };
 
   const handleMouseUp = () => {
+    setIsDragging(false);
+    // Bounce back with different lengths based on light state
+    setTimeout(() => {
+        if (isLightOn) {
+            setWireLength(75);
+        }
+        else {
+            setWireLength(50);
+        }  
+    }, 100);
+  };
+
+  // touch events for mobile
+  const handleWireTouchStart = (e) => {
+      setIsDragging(true);
+      setHasTriggered(false);
+      e.preventDefault();
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    
+    const logoContainer = document.querySelector('.logo-container');
+    if (!logoContainer) return;
+    
+    const rect = logoContainer.getBoundingClientRect();
+    const logoBottom = rect.bottom;
+    const touch = e.touches[0];
+    const touchY = touch.clientY;
+    const newLength = Math.max(30, Math.min(120, touchY - logoBottom + 30));
+    
+    setWireLength(newLength);
+    
+    // Toggle light when pulled down enough (only once per drag)
+    if (newLength > 80 && !hasTriggered) {
+      setIsLightOn(!isLightOn);
+      setHasTriggered(true);
+      playAudio();
+    }
+    
+    e.preventDefault(); // Prevent scrolling while dragging
+  };
+
+  const handleTouchEnd = () => {
     setIsDragging(false);
     // Bounce back with different lengths based on light state
     setTimeout(() => {
@@ -87,6 +132,7 @@ const Hero4 = () => {
     });
   };
 
+  // effect for mouse events
   React.useEffect(() => {
     if (isDragging) {
       document.addEventListener('mousemove', handleMouseMove);
@@ -96,6 +142,19 @@ const Hero4 = () => {
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging, isLightOn, hasTriggered]);
+
+  // effect for touch events
+  React.useEffect(() => {
+    if (isDragging) {
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+      document.addEventListener('touchend', handleTouchEnd);
+    }
+    
+    return () => {
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
     };
   }, [isDragging, isLightOn, hasTriggered]);
 
