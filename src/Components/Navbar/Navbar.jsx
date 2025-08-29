@@ -70,7 +70,9 @@ const Navbar = () => {
 
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
-  })
+
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   // dropdown menu states
   // const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -150,6 +152,23 @@ const Navbar = () => {
   //   document.addEventListener('click', closeDropdown);
   //   return () => document.removeEventListener('click', closeDropdown);
   // }, [dropdownOpen]);
+
+  // close mobile sidebar when clicking outside
+  useEffect(() => {
+    const closeMobileSidebar = (e) => {
+      // check mobile menu is open, click is outside nav element and menu icon
+      if (mobileMenu && !e.target.closest('nav') && !e.target.closest('.menu-icon')) {
+        setMobileMenu(false);
+
+        // close dropdowns
+        setAboutDropdownOpen(false);
+        setActivitiesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('click', closeMobileSidebar);
+    return () => document.removeEventListener('click', closeMobileSidebar);
+  }, [mobileMenu]);
 
   // hover handlers for dropdown menus (for desktop)
   const handleAboutDropdownMouseEnter = () => {
