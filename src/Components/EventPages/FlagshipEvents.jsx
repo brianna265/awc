@@ -74,6 +74,11 @@ const FlagshipEvents = () => {
               opportunities and help shape a more diverse and inclusive tech 
               community.
           </p>
+          <p>If you’re interested in participating in Women in Computing Day or 
+            sponsoring AWC, email us at
+            <a href="mailto:awc-g@vt.edu" className='inline-link'> awc-g@vt.edu </a>
+            to connect with the WCD chair.
+          </p>
         </div>
       </div>
     </div>
