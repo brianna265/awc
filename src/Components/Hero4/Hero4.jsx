@@ -54,6 +54,9 @@ const Hero4 = () => {
       setIsDragging(true);
       setHasTriggered(false);
       e.preventDefault();
+      e.stopPropagation();
+
+      document.body.style.overflow = 'hidden';  // prevent body scrolling while dragging
   };
 
   const handleTouchMove = (e) => {
@@ -78,10 +81,14 @@ const Hero4 = () => {
     }
     
     e.preventDefault(); // Prevent scrolling while dragging
+    e.stopPropagation();
   };
 
   const handleTouchEnd = () => {
     setIsDragging(false);
+
+    document.body.style.overflow = '';  // re-enable body scrolling
+
     // Bounce back with different lengths based on light state
     setTimeout(() => {
         if (isLightOn) {
@@ -148,13 +155,20 @@ const Hero4 = () => {
   // effect for touch events
   React.useEffect(() => {
     if (isDragging) {
-      document.addEventListener('touchmove', handleTouchMove, { passive: false });
-      document.addEventListener('touchend', handleTouchEnd);
+      const handleTouchMovePassive = (e) => handleTouchMove(e);
+      const handleTouchEndPassive = () => handleTouchEnd();
+
+      document.addEventListener('touchmove', handleTouchMovePassive, { passive: false });
+      document.addEventListener('touchend', handleTouchEndPassive, { passive: false });
+      document.addEventListener('touchcancel', handleTouchEndPassive, { passive: false });
     }
     
     return () => {
       document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleTouchEnd);
+      document.removeEventListener('touchcancel', handleTouchEnd);
+
+      document.body.style.overflow = '';  // ensure scrolling is re-enabled if component unmounts during drag
     };
   }, [isDragging, isLightOn, hasTriggered]);
 
