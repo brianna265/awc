@@ -53,7 +53,7 @@ const FlagshipEvents = () => {
               <a href="https://www.hackviolet.com/" target="_blank" rel='noopener noreferrer' className='inline-link'> hackviolet.com</a>!
           </p>
           <p>For any questions, feel free to contact
-              <a href="mailto:hackvioletvt@gmail.com" className='inline-link'> hackvioletvt@gmail.com</a>.
+              <a href="mailto:hackvioletvt@gmail.com" target='_blank' rel='noopener noreferrer' className='inline-link'> hackvioletvt@gmail.com</a>.
           </p>
         </div>
         <div className='content'>
@@ -76,7 +76,7 @@ const FlagshipEvents = () => {
           </p>
           <p>If you’re interested in participating in Women in Computing Day or 
             sponsoring AWC, email us at
-            <a href="mailto:awc-g@vt.edu" className='inline-link'> awc-g@vt.edu </a>
+            <a href="mailto:awc-g@vt.edu" target='_blank' rel='noopener noreferrer' className='inline-link'> awc-g@vt.edu </a>
             to connect with the WCD chair.
           </p>
         </div>

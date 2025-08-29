@@ -65,7 +65,7 @@ const Events = () => {
         <h2>Join Us!</h2>
         <p>If you want to be part of AWC, just stop by one of our meetings or 
           events and talk to us! If you have questions, feel free to 
-          <a href="mailto:awc-news-g@vt.edu" className='inline-link'> contact us</a>.
+          <a href="mailto:awc-g@vt.edu" target='_blank' rel='noopener noreferrer' className='inline-link'> contact us</a>.
           Remember, <b>you don’t have to be a woman</b> to join AWC! Only a 
           wanting to support women in computing is required!
         </p>

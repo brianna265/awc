@@ -91,7 +91,7 @@ const About = () => {
           {/* <a href="#events" onClick={handleEventsClick} className='inline-link'> Events </a> */}
           page, and if you’d like to support our efforts, or have any questions 
           at all, please feel free to 
-          <a href="mailto:awc-news-g@vt.edu" className='inline-link'> contact us</a>!
+          <a href="mailto:awc-g@vt.edu" target='_blank' rel='noopener noreferrer' className='inline-link'> contact us</a>!
         </p>
       </div>
     </div>
