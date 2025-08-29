@@ -64,11 +64,6 @@ const Hero4 = () => {
 
   const handleTouchMove = (e) => {
     if (!isDragging) return;
-
-    // disable scrolling once we start moving
-    if (!document.body.style.overflow) {
-      document.body.style.overflow = 'hidden';
-    }
     
     const logoContainer = document.querySelector('.logo-container');
     if (!logoContainer) return;
@@ -90,13 +85,10 @@ const Hero4 = () => {
     
     // prevent scrolling while dragging
     e.preventDefault(); 
-    e.stopPropagation();
   };
 
   const handleTouchEnd = () => {
     setIsDragging(false);
-
-    document.body.style.overflow = '';  // re-enable body scrolling
 
     // Bounce back with different lengths based on light state
     setTimeout(() => {
