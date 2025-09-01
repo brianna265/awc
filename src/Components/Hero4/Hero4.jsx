@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Hero4.css';
-import logo from '../../assets/images/AWCLogo-mod-off.png'
+import logo from '../../assets/AWCLogo-mod-off.png'
 
 const Hero4 = () => {
   const [isLightOn, setIsLightOn] = useState(false);
