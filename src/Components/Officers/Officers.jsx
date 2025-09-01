@@ -62,7 +62,6 @@ const Officers = () => {
           <p>2025-2026 Officer Team</p>
           <h1>Meet the Team!</h1>   
         </div>
-        {/* <Heading subtitle='2025-2026 Officer Team' title='Meet the Team!'/> */}
       </div>
       
       <div className='officer-section'>
@@ -78,7 +77,6 @@ const Officers = () => {
       <div className='officer'>
         <img src={officer_2} alt="shreya-t" />
         <div className='blurb'>
-            {/* <p className='blurb-text'>or nah?</p> */}
         </div>
         <div className='caption'>
             <p><b>Shreya Thothathri</b><br />Vice President</p>
@@ -87,7 +85,6 @@ const Officers = () => {
       <div className='officer'>
         <img src={officer_3} alt="swathi-v" />
         <div className='blurb'>
-            {/* <p className='blurb-text'>we need pictures</p> */}
         </div>
         <div className='caption'>
             <p><b>Swathi Vijayakumar</b><br />Vice President</p>

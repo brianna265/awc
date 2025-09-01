@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import navbar_logo from '../../assets/images/navbar-removebg.png'
 import menu_icon from '../../assets/menu-icon.png'
-// import { Link as ScrollLink } from 'react-scroll';
 import { useNavigate, useLocation } from 'react-router-dom'
-// import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   // navbar heading background
@@ -75,10 +73,6 @@ const Navbar = () => {
   }, []);
 
   // dropdown menu states
-  // const [dropdownOpen, setDropdownOpen] = useState(false);
-  // const toggleDropdown = () => {
-  //   setDropdownOpen(!dropdownOpen);
-  // }
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [activitiesDropdownOpen, setActivitiesDropdownOpen] = useState(false);
 
@@ -114,13 +108,7 @@ const Navbar = () => {
 
   // handle subpage click
   const handleSubpageClick = (route, closeDropdownFn) => {
-    // if (dropdownType === 'about') {
-    //   setAboutDropdownOpen(false);
-    // } else if (dropdownType === 'activities') {
-    //   setActivitiesDropdownOpen(false);
-    // }
     closeDropdownFn();
-
     navigate(route);
 
     // automatically scroll to top of page
@@ -143,15 +131,6 @@ const Navbar = () => {
     document.addEventListener('click', closeDropdowns);
     return () => document.removeEventListener('click', closeDropdowns);
   }, [isMobile])
-  // useEffect(() => {
-  //   const closeDropdown = (e) => {
-  //     if (dropdownOpen && !e.target.closest('.nav-dropdown')) {
-  //       setDropdownOpen(false);
-  //     }
-  //   };
-  //   document.addEventListener('click', closeDropdown);
-  //   return () => document.removeEventListener('click', closeDropdown);
-  // }, [dropdownOpen]);
 
   // close mobile sidebar when clicking outside
   useEffect(() => {
@@ -250,7 +229,6 @@ const Navbar = () => {
             )}
           </div>
         </li>
-        {/* <li><button className='nav-btn' onClick={() => handleNavClick('activities')}>Activities</button></li> */}
 
         {/* gallery */}
         {/* <li><Link to='gallery' smooth={true} offset={-120} duration={500}>Gallery</Link></li> */}

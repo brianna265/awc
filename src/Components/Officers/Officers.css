@@ -24,15 +24,11 @@
 
 .officer-section{
     margin: 2rem auto;
-    /* max-width: 900px; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1rem;
     padding-left: 5%;
     padding-right: 5%;
-    /* align-items: center; */
-    /* justify-content: space-around; */
-    /* flex-wrap: wrap; */
 }
 
 .officer img{
@@ -47,7 +43,6 @@
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     padding: 15px;
     border-radius: 10px;
-    /* padding-bottom: 60px; */
 }
 
 .blurb{
@@ -76,17 +71,11 @@
 }
 
 .officer:hover .blurb{
-    /* opacity: 1; */
     padding-top: 0;
 }
 
 .caption{
-    /* border-radius: 10px; */
-    /* position: absolute; */
-    /* display: flex; */
-    /* align-items: center; */
     justify-content: center;
-    /* flex-direction: column; */
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;

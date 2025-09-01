@@ -5,43 +5,6 @@ import { Link } from 'react-scroll';
 
 const About = () => {
 
-  // const handleEventsClick = (e) => {
-  //   e.preventDefault();
-
-  //   const eventsSection = document.getElementById('events');
-
-  //   if (eventsSection) {
-  //     const navbarHeight = 67.74;
-  //     const offset = navbarHeight + 130;
-  //     const elementPosition = eventsSection.offsetTop - offset;
-  
-  //     window.scrollTo({
-  //       top: elementPosition,
-  //       behavior: 'smooth'
-  //     });
-  //   }
-    
-  // }
-
-  const handleContactClick = (e) => {
-    e.preventDefault();
-    const email = 'awc-news-g@vt.edu';
-    const subject = 'Contact from AWC Website';
-
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
-
-    try {
-      window.location.href = mailtoLink;
-    }
-    catch (error) {
-      navigator.clipboard.writeText(email).then(() => {
-        alert(`Email client not available. Email address ${email} has been copied to your clipboard!`);
-      }).catch(() => {
-        alert(`Please email us at: ${email}`);
-      });
-    }
-  }
-
   return (
     <div className='about' id='about'>
       <div className='about-top'>
@@ -88,7 +51,6 @@ const About = () => {
           We also have many social activities to help build an enduring sense of
           community. You can find out more about what we do on our 
           <Link to='activities' smooth={true} offset={-150} duration={500} className='inline-link'> Activities </Link>
-          {/* <a href="#events" onClick={handleEventsClick} className='inline-link'> Events </a> */}
           page, and if you’d like to support our efforts, or have any questions 
           at all, please feel free to 
           <a href="mailto:awc-g@vt.edu" target='_blank' rel='noopener noreferrer' className='inline-link'> contact us</a>!

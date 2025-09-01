@@ -1,8 +1,7 @@
 nav{
     width: 100%;
-    /* background: #024064; */
     color: #FFF7F4;
-    padding: 10px 0; /* change as desired */
+    padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,16 +24,13 @@ nav{
 nav ul {
     display: flex;
     gap: 1.5rem;
-    /* border: 2px solid green; */
 }
 
 nav ul li {
-    /* display: inline-block; */
     list-style: none;
     margin: 5px 18px;
     font-size: 15px;
     cursor: pointer;
-    /* border: 2px solid red; */
 }
 
 nav ul li, nav ul li a {
@@ -82,10 +78,8 @@ nav ul li .btn-primary {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* padding: 0.5rem 0rem; */
     font-size: inherit;
     transition: color 0.3s ease;
-    /* border: 2px solid blue; */
 }
 
 .dropdown-toggle:hover {
@@ -103,7 +97,6 @@ nav ul li .btn-primary {
 
 .dropdown-menu {
     position: absolute;
-    /* top: 100%; */
     top: 100%;
     left: 0;
     background: var(--color2);
@@ -116,24 +109,11 @@ nav ul li .btn-primary {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    /* margin-top: 28px; */
     backdrop-filter: blur(10px);
-    /* border: 2px solid green; */
     padding-top: 0.75rem;
     cursor: default;
     padding-bottom: 1rem;
 }
-
-/* .nav-dropdown::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    height: 8px;
-    background: transparent;
-    z-index: inherit;
-    border: 2px solid red;
-} */
 
 nav:not(.dark-nav) .dropdown-menu {
     background: rgba(2, 64, 100, 0.3);
@@ -156,10 +136,7 @@ nav:not(.dark-nav) .dropdown-menu {
 
 .dropdown-item {
     display: block;
-    /* padding: 0.75rem 0rem; */
-    /* margin-bottom: 0.5rem; */
     transition: background-color 0.2s ease;
-    /* border: 2px solid yellow; */
 }
 
 .menu-icon{
@@ -219,7 +196,6 @@ nav:not(.dark-nav) .dropdown-menu {
     }
 
     .dropdown-item {
-        /* padding: 0.5rem 0; */
         border-left: 2px solid var(--color3);
         padding-left: 0.5rem;
         margin-bottom: 0rem;

@@ -25,7 +25,7 @@ const FlagshipEvents = () => {
   
   return (
     <div className='event-type-page'>
-      {/* Header Section */}
+      {/* header section */}
       <div className='event-header'>
         <button className='back-button' onClick={handleBack}>
           ← Back

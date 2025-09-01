@@ -5,7 +5,7 @@ import logo from '../../assets/images/AWCLogo-mod-off.png'
 const Hero4 = () => {
   const [isLightOn, setIsLightOn] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-  const [wireLength, setWireLength] = useState(60); // Initial wire length
+  const [wireLength, setWireLength] = useState(60); // initial wire length
   const [hasTriggered, setHasTriggered] = useState(false);
 
   const handleWireMouseDown = (e) => {
@@ -27,7 +27,7 @@ const Hero4 = () => {
     
     setWireLength(newLength);
     
-    // Toggle light when pulled down enough (only once per drag)
+    // toggle light when pulled down enough (only once per drag)
     if (newLength > 80 && !hasTriggered) {
       setIsLightOn(!isLightOn);
       setHasTriggered(true);
@@ -37,7 +37,7 @@ const Hero4 = () => {
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    // Bounce back with different lengths based on light state
+    // bounce back with different lengths based on light state
     setTimeout(() => {
         if (isLightOn) {
             setWireLength(75);
@@ -50,12 +50,12 @@ const Hero4 = () => {
 
   const handleLearnMoreClick = () => {
     if (!isLightOn) {
-      // Animate the light turning on
-      setWireLength(100); // Simulate pulling the wire
+      // animate the light turning on
+      setWireLength(100); // simulate pulling the wire
       playAudio();
       setIsLightOn(true);
       
-      // Bounce back to "on" position
+      // bounce back to "on" position
       setTimeout(() => {
         setWireLength(75);
       }, 300);
@@ -63,7 +63,7 @@ const Hero4 = () => {
       
     }
     
-    // Scroll to about section after light animation
+    // scroll to about section after light animation
     setTimeout(() => {
       const aboutSection = document.getElementById('about');
       if (aboutSection) {
@@ -77,7 +77,7 @@ const Hero4 = () => {
         });
 
       }
-    }, isLightOn ? 0 : 800); // Delay if light needs to turn on first
+    }, isLightOn ? 0 : 800); // delay if light needs to turn on first
   };
 
   const playAudio = () => {
