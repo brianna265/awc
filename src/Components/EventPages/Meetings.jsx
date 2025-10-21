@@ -53,7 +53,7 @@ const Meetings = () => {
       </div>
       <div className='rsvp-section'>
           <button className='btn-primary'>
-            <a href="https://forms.gle/RPnyqTpH2fK3isYXA" target="_blank" rel='noopener noreferrer'>
+            <a href="https://bloomberg.avature.net/events/EventDetailsPage?jobId=14415" target="_blank" rel='noopener noreferrer'>
               RSVP to our next meeting!
             </a>
           </button>
