@@ -61,7 +61,7 @@ const FlagshipEvents = () => {
           <p>Every spring, the Association for Women in Computing hosts 
               <b> Women in Computing Day</b>, an outreach event introducing 
               6th- and 7th-grade girls to the exciting world of technology. 
-              Now in its 22nd year, this program is a cornerstone of our 
+              Now in its 23rd year, this program is a cornerstone of our 
               mission to inspire the next generation of women in tech. With 
               the male-to-female ratio in computing still disproportionately 
               low, this event provides early exposure.
@@ -74,12 +74,15 @@ const FlagshipEvents = () => {
               opportunities and help shape a more diverse and inclusive tech 
               community.
           </p>
-          <p>AWC is looking for two co-chairs to help lead our 23rd annual 
-            Women’s Computing Day this March. This outreach event brings middle 
-            school girls to campus and encourages them to explore STEM through 
-            hands-on activities and mentorship. Apply 
-            <a href="https://forms.gle/UbQZsEufHXZ6A3ST6" target='_blank' rel='noopener noreferrer' className='inline-link'> here </a>
-            by September 24th!
+          <p>This year, Women in Computing Day is coming up on <b>February 20, 
+            2026, from 9:00am-3:00pm in Squires</b> 🎉. We would love your 
+            support in running this event! You can help out for any part of the 
+            day that works for you, and we'll have lunch for volunteers. 
+            If you'd like to volunteer, please fill out the 
+            <a href="https://forms.gle/unKBgqmMpDHmR77w8" target='_blank' rel='noopener noreferrer' className='inline-link'> volunteer form </a>
+            by <b>February 13th</b>.
+            Feel free to reach out if you have any questions, we'd love to have 
+            you help out!
           </p>
           <p>If you have any questions about Women in Computing Day or are 
             interested in sponsoring AWC, email us at
