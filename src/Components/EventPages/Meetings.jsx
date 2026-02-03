@@ -40,7 +40,7 @@ const Meetings = () => {
         <div className='content'>
           <p>Join us weekly to connect, learn, and hear from industry 
             professionals. Our meetings include general sessions, workshops, and
-            open study hours. They are typically <b>every Thursday from 6:30pm 
+            open study hours. They are typically <b>every Wednesday from 6:30pm 
             to 7:30pm</b>, and sometimes also include dinner!
           </p>
           <p>Feel free to stop by our meetings and get to know a little bit more
