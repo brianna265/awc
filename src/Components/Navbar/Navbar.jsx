@@ -234,7 +234,7 @@ const Navbar = () => {
         {/* <li><Link to='gallery' smooth={true} offset={-120} duration={500}>Gallery</Link></li> */}
 
         {/* linktree */}
-        <li><a className='btn-primary' href="https://linktr.ee/awc_vt" target='_blank' rel='noopener noreferrer'>Join Us</a></li>
+        <li><a className='btn-primary' href="https://linktr.ee/vt_awc" target='_blank' rel='noopener noreferrer'>Join Us</a></li>
       </ul>
       <img src={menu_icon} alt="menu-icon" className='menu-icon' onClick={toggleMenu}/>
     </nav>
