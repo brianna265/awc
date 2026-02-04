@@ -56,8 +56,8 @@ const Opportunities = () => {
             </p>
             <p>Join our 
               <a href="https://forms.gle/jsLrgL8DmYZsS7f79" target='_blank' rel='noopener noreferrer' className='inline-link'> mailing list </a>
-              and attend our networking events to stay 
-              informed about the latest opportunities in tech!
+              and attend our networking events to stay informed about the latest
+               opportunities in tech!
             </p>
         </div>
       </div>
